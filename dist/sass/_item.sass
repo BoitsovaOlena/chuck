@@ -1,0 +1,92 @@
+.joke-item
+    position: relative
+    width: 100%
+    margin-top: 20px
+    padding: 67px 40px 40px 100px
+    background-color: $bgColor2
+    border-radius: 20px
+    .joke-item__icon
+        position: absolute
+        top: 67px
+        left: 40px
+        width: 40px
+        height: 40px
+        background-color: $bgColor1
+        border-radius: 100%
+        img 
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+    .joke-item__favorite
+        position: absolute
+        display: inline-block
+        width: 20px
+        height: 17px
+        top: 40px
+        right: 40px
+        background-image: url(../img/heart.png)
+    .full
+        background-image: url(../img/heart2.png)
+    .joke-item__main 
+        width: 100%
+        +flex(column, flex-start, flex-start, nowrap)
+        .joke-item__messageID
+            margin-bottom: 5px
+            +font(500, 10px, 14px, normal, normal)
+            color: $textColor2
+            a:after
+                content: ""
+                display: inline-block
+                margin-left: 5px
+                width: 10px
+                height: 10px
+                background-image: url(../img/link.png)
+
+        .joke-item__text
+            margin-bottom: 23px
+            +font(normal, 18px, 26px, normal, normal)
+            color: $textColor1
+        .joke-item__data
+            width: 100%
+            +flex(row, space-between, center, nowrap)
+            .joke-item__update
+                +font(normal, 10px, 14px, normal, normal)
+                color: $textColor2
+            .joke-item__categori
+                display: inline-block
+                padding: 6px 20px
+                +font(500, 10px, 14px, 2px, normal)
+                text-transform: uppercase
+                color: $textColor1
+                border-radius: 6px
+                background-color: $bgColor1
+.content
+    .joke-item
+        padding: 47px 20px 20px 80px
+        background-color: $bgColor1
+        border-radius: 10px
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1)
+        .joke-item__icon
+            top: 47px
+            left: 20px
+            background-color: $bgColor2
+        .joke-item__favorite
+            top: 20px
+            right: 20px
+        .joke-item__main 
+            .joke-item__text
+                margin-bottom: 20px
+                +font(normal, 14px, 20px, normal, normal)
+            .joke-item__data
+                .joke-item__update
+                    +font(normal, 10px, 14px, normal, normal)
+                    color: $textColor2
+                .joke-item__categori
+                    display: none
+
+
+
+
+
+    

@@ -1,0 +1,63 @@
+.favourite
+    position: relative
+    width: 480px
+    z-index: 4
+    +flex(row, flex-start, stretch, nowrap)
+    .button-favorite
+        z-index: 5
+        position: absolute
+        top: 40px
+        left: 40px
+        p 
+            color: $textColor2 
+            +font(500, 20px, 28px, normal, normal) 
+    .button-favorite-mini
+        display: none
+        z-index: 5
+        position: absolute
+        top: 40px
+        right: 40px
+        p 
+            color: $textColor2 
+            +font(500, 20px, 28px, normal, normal)
+    .button-favorite-mini:before 
+        content: "=" 
+        display: inline-block
+        position: absolute
+        top: 0px
+        left: -38px
+        width: 28px
+        height: 28px
+        text-align: center
+        font-size: 23px
+        border-radius: 100%
+        background-color: $textColor1
+        color: $bgColor1  
+    .button-favorite-mini:after
+        content: "X" 
+        box-sizing: border-box
+        display: none
+        position: absolute
+        top: 0px
+        left: -38px
+        width: 28px
+        height: 28px
+        text-align: center
+        font-size: 14px
+        padding-top: 5px
+        border-radius: 100%
+        background-color: $textColor1
+        color: $bgColor1 
+    .content
+        +flex(column, flex-start, flex-start, nowrap)
+        min-height: 100vh
+        width: 100%
+        background-color: $bgColor2
+        padding: 68px 40px 40px 40px
+    .fill
+        display: none
+        width: calc( 100% - 480px )
+        min-height: 100vh
+        background-color:  rgba(0, 0, 0, 0.3)
+
+ 
